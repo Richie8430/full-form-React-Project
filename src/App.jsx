@@ -1,13 +1,11 @@
 import { useState } from "react";
-import ExpenseTracker from "./ExpenseTracker/ExpenseTracker";
-import "./App.css";
-import DarklightMode from "./assets/DarklightMode";
+import Registration from "./components/Registration/registration";
+import Login from "./assets/Login/Login";
 
 function App() {
   return (
     <>
-      <ExpenseTracker />
-      {/* <DarklightMode /> */}
+      <Registration />
     </>
   );
 }
