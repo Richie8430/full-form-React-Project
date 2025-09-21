@@ -1,5 +1,5 @@
 .body {
-  background-color: hsl(214, 16%, 92%);
+  background-color: aliceblue;
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
@@ -9,6 +9,7 @@
   margin: 0;
   padding: 20px;
 }
+
 .container {
   display: flex;
   flex-direction: column;
@@ -16,57 +17,68 @@
   width: 100%;
   /* overflow: hidden; */
 }
+
 .aisec {
   max-width: 300px;
   width: 100%;
   margin: 0;
 }
+
 .welcome {
   font-size: 1.2rem;
 }
+
 .username {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
 }
+
 .password {
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
 }
 
-label {
+.form label {
   font-size: 14px;
   margin: 10px 0;
 }
-input[type="text"] {
+
+.form input[type="text"] {
   flex: 1;
   padding: 20px;
   border: none;
   outline: none;
   font-size: 1rem;
-  background-color: hsla(221, 84%, 93%, 0.704);
+  color: hsl(221, 39%, 11%);
+  background-color: #f9fafb;
 }
-input[type="password"] {
+
+.form input[type="password"] {
   flex: 1;
   padding: 20px;
   border: none;
   outline: none;
   font-size: 1rem;
-  background-color: hsl(221, 49%, 90%);
+  color: hsl(221, 39%, 11%);
+  background-color: #f9fafb;
 }
+
 .checks {
   display: flex;
   justify-content: space-between;
   margin: 20px 0;
   width: 100%;
 }
+
 .ahref a {
   text-decoration: none;
   color: black;
   font-size: 14px;
   cursor: pointer;
 }
+
 .loginButton {
   width: 100%;
   color: #fff;
@@ -78,6 +90,7 @@ input[type="password"] {
   font-weight: bold;
   cursor: pointer;
 }
+
 .footer {
   text-align: center;
   color: rgb(150, 149, 149);
@@ -89,23 +102,35 @@ input[type="password"] {
   cursor: pointer;
   text-decoration: none;
 }
+
+.footer .sapn:hover {
+  color: hsl(230, 99%, 42%);
+}
+
+.footer .sapn:active {
+  color: hsla(272, 90%, 50%, 0.57);
+}
+
 .eye {
   width: 15px;
 }
+
 .eyy {
   padding: 20px;
-  background-color: hsl(214, 16%, 92%);
+  background-color: rgb(231, 242, 251);
   border: none;
 }
+
 .eyy00 {
   padding: 20px;
-  background-color: hsl(214, 16%, 92%);
+  background-color: rgb(231, 242, 251);
   border-bottom: none;
   border-top: none;
   border-left: 1px solid hsl(0, 0%, 70%);
   border-right: none;
   cursor: pointer;
 }
+
 .other {
   border: 1px solid hsl(0, 0%, 54%);
   display: flex;

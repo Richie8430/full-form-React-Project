@@ -1,0 +1,14 @@
+body.light {
+  margin: 0;
+  background-color: #fff;
+  color: rgb(11, 11, 11);
+}
+body.dark {
+  background-color: #333;
+  color: #eee;
+}
+body.dark button {
+  background-color: #555;
+  color: #eee;
+  border-color: #777;
+}
