@@ -28,7 +28,7 @@ function Registration() {
   });
 
   const [validationErrors, setValidationErrors] = useState({});
-  const [register, setRegister] = useState(false);
+  const [register, setRegister] = useState(true);
 
   const validateCategory = (categoryIndex) => {
     let errors = {};
@@ -160,6 +160,19 @@ function Registration() {
   };
 
   // Re-creating the styling logic to apply to the components
+  const headerTransform = (register) => {
+    if (register === true) {
+      return "translateY(10%)";
+    } else {
+      return "translateY(20%)";
+    }
+  };
+  const headerOpacity = (register) => {
+    return register === true ? 1 : 0;
+  };
+  const headerPointerEvent = (register) => {
+    return register === true ? "auto" : "none";
+  };
   const getTransform = (categoryIndex) => {
     if (categoryIndex === currentCategory) {
       return "translateX(0)";
@@ -182,8 +195,16 @@ function Registration() {
     <>
       <div className={styles.component}>
         <Navbar />
-        {register === false ? (
-          <div className={styles.top}>
+        <div className={styles.display}>
+          <div
+            className={styles.top}
+            style={{
+              transform: headerTransform(register),
+              opacity: headerOpacity(register),
+              pointerEvents: headerPointerEvent(register),
+              zIndex: register === register ? 10 : 1,
+            }}
+          >
             <h1>HEY AIESEC!</h1>
             <p>
               Welcome to our sign up page, Let's get to know each other by you
@@ -203,8 +224,15 @@ function Registration() {
               Let's get Started
             </button>{" "}
           </div>
-        ) : (
-          <form onSubmit={handleSubmit} className={styles.Registrationform}>
+          <form
+            onSubmit={handleSubmit}
+            className={styles.Registrationform}
+            style={{
+              transform: headerTransform(!register),
+              opacity: headerOpacity(!register),
+              pointerEvents: headerPointerEvent(!register),
+            }}
+          >
             <div
               className={styles.category1}
               style={{
@@ -257,7 +285,7 @@ function Registration() {
               />
             </div>
           </form>
-        )}
+        </div>
       </div>
     </>
   );
