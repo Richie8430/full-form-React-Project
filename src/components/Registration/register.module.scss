@@ -51,7 +51,6 @@ body {
 .top {
   justify-content: center;
   width: 100%;
-  max-width: 1000px;
   margin: 20px;
   opacity: 0.8;
   font-size: large;
@@ -114,9 +113,9 @@ body {
   justify-content: center;
   width: 100%;
   max-width: 500px;
-  min-height: 650px;
+  min-height: 800px;
   padding: 20px;
-  // overflow: hidden;
+  overflow: hidden;
   top: 0;
   left: 0;
   width: 100%;
