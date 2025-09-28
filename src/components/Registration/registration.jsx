@@ -5,7 +5,7 @@ import Category1 from "./Category1";
 import Category2 from "./Category2";
 import Category3 from "./Category3";
 
-function Registration() {
+function Registration({ lightMode, darkMode, theme, toogleTheme }) {
   const [currentCategory, setCurrentCategory] = useState(0);
 
   const [formData, setFormData] = useState({
@@ -159,7 +159,6 @@ function Registration() {
     }
   };
 
-  // Re-creating the styling logic to apply to the components
   const headerTransform = (register) => {
     if (register === true) {
       return "translateY(10%)";
@@ -194,7 +193,12 @@ function Registration() {
   return (
     <>
       <div className={styles.component}>
-        <Navbar />
+        <Navbar
+          lightMode={lightMode}
+          darkMode={darkMode}
+          theme={theme}
+          toogleTheme={toogleTheme}
+        />
         <div className={styles.display}>
           <div
             className={styles.top}

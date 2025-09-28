@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import aiesec from "../../assets/aieseclogo.png";
+import aieseclogo from "../../assets/Aiesecblue.png";
+import blackAieseclogo from "../../assets/Aiesecwhite.png";
 import user from "../../assets/user.svg";
 import lock from "../../assets/lock.svg";
 import eye from "../../assets/visibility.svg";
@@ -7,7 +8,7 @@ import noEye from "../../assets/visibility_off.svg";
 import styles from "./login.module.scss";
 import { Link } from "react-router-dom";
 
-function Login() {
+function Login({ theme }) {
   const [userInput, setUserInput] = useState({
     username: "",
     userPassword: "",
@@ -53,9 +54,13 @@ function Login() {
   };
 
   return (
-    <div className={styles.body}>
+    <div className={styles.wrapper}>
       <div className={styles.container}>
-        <img className={styles.aisec} src={aiesec} alt="AIESEC Logo" />
+        <img
+          className={styles.aisec}
+          src={theme === "light" ? aieseclogo : blackAieseclogo}
+          alt="AIESEC Logo"
+        />
         <form className={styles.form} onSubmit={handleSubmit}>
           <p className={styles.welcome}>Welcome back!</p>
 
